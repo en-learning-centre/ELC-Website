@@ -1,36 +1,57 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ELC Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <title>Welcome to ELC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav id="sidebar">
-  <h2>ELC Documents</h2>
-  <ul>
-    <li><a href="docs/about.md">About</a></li>
-    <li><a href="docs/vision.md">Vision</a></li>
-    <li><a href="docs/mission.md">Mission</a></li>
-    <li>Curriculum
+  <header><h1>En-Learning Centre (ELC)</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#lesson">Lesson Plans</a></li>
+      <li><a href="#policy">Policies</a></li>
+      <li><a href="#articles">Articles</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <ul><li><a href="docs/about/about.pdf" target="_blank">About ELC (PDF)</a></li></ul>
+    </section>
+    <section id="vision">
+      <h2>Vision</h2>
+      <ul><li><a href="docs/vision/vision.docx" target="_blank">Vision Document (Word)</a></li></ul>
+    </section>
+    <section id="mission">
+      <h2>Mission</h2>
+      <ul><li><a href="docs/mission/mission.txt" target="_blank">Mission (Text)</a></li></ul>
+    </section>
+    <section id="curriculum">
+      <h2>Curriculum</h2>
       <ul>
-        <li><a href="docs/curriculum/eyfs-subject1.md">EYLF Subject 1</a></li>
-        <li><a href="docs/curriculum/montessori-subject1.md">Montessori Subject 1</a></li>
+        <li><a href="docs/curriculum/eylf.pdf" target="_blank">EYLF Curriculum (PDF)</a></li>
+        <li><a href="docs/curriculum/montessori.docx" target="_blank">Montessori Curriculum (Word)</a></li>
       </ul>
-    </li>
-    <li>Lesson Plans
-      <ul><li><a href="docs/lesson-plans/sample-lesson.md">Sample Lesson</a></li></ul>
-    </li>
-    <li>Policies
-      <ul><li><a href="docs/policies/policy1.md">Policy 1</a></li></ul>
-    </li>
-    <li>Articles
-      <ul><li><a href="docs/articles/article1.md">Article 1</a></li></ul>
-    </li>
-  </ul>
-</nav>
-<div id="content">
-    <p>Select a document from the sidebar to view its content.</p>
-</div>
+    </section>
+    <section id="lesson">
+      <h2>Lesson Plans</h2>
+      <ul><li><a href="docs/lesson-plans/rainy-day-activity.pdf" target="_blank">Rainy Day Activity (PDF)</a></li></ul>
+    </section>
+    <section id="policy">
+      <h2>Policies</h2>
+      <ul><li><a href="docs/policies/health-safety-policy.pdf" target="_blank">Health & Safety Policy (PDF)</a></li></ul>
+    </section>
+    <section id="articles">
+      <h2>Articles</h2>
+      <ul><li><a href="docs/articles/power-of-play.docx" target="_blank">The Power of Play (Word)</a></li></ul>
+    </section>
+  </main>
 </body>
 </html>
