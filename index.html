@@ -1,158 +1,36 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELC School Full Website</title>
-  <style>
-    body { font-family: 'Poppins', sans-serif; margin:0; background:#fdfdfd; }
-    header { background:#4CAF50; color:white; padding:15px 0; text-align:center; font-size:24px; }
-    nav { display:flex; flex-wrap:wrap; justify-content:center; background:#66BB6A; }
-    nav a { color:white; padding:14px 16px; text-decoration:none; display:block; }
-    nav a:hover { background:#388E3C; }
-    .container { padding:20px; max-width:1000px; margin:auto; }
-    section { display:none; }
-    section.active { display:block; }
-    h2 { text-align:center; color:#333; margin-bottom:15px; }
-    .category-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:20px; }
-    .card { background:white; padding:15px; border-radius:10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:transform 0.3s; }
-    .card:hover { transform:translateY(-5px); }
-    .card img { width:60px; height:60px; }
-    .card h3 { color:#4CAF50; margin:10px 0 5px; }
-    footer { background:#4CAF50; color:white; text-align:center; padding:10px; margin-top:30px; }
-    ul { line-height: 1.8; }
-  </style>
+    <title>ELC Website</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<header>
-  Welcome to ELC School
-</header>
-
-<nav>
-  <a href="#" onclick="showPage('home')">Home</a>
-  <a href="#" onclick="showPage('about')">About</a>
-  <a href="#" onclick="showPage('programs')">Programs</a>
-  <a href="#" onclick="showPage('curriculum')">Curriculum</a>
-  <a href="#" onclick="showPage('admissions')">Admissions</a>
-  <a href="#" onclick="showPage('feedback')">Parents Feedback</a>
-  <a href="#" onclick="showPage('contact')">Contact</a>
+<nav id="sidebar">
+  <h2>ELC Documents</h2>
+  <ul>
+    <li><a href="docs/about.md">About</a></li>
+    <li><a href="docs/vision.md">Vision</a></li>
+    <li><a href="docs/mission.md">Mission</a></li>
+    <li>Curriculum
+      <ul>
+        <li><a href="docs/curriculum/eyfs-subject1.md">EYLF Subject 1</a></li>
+        <li><a href="docs/curriculum/montessori-subject1.md">Montessori Subject 1</a></li>
+      </ul>
+    </li>
+    <li>Lesson Plans
+      <ul><li><a href="docs/lesson-plans/sample-lesson.md">Sample Lesson</a></li></ul>
+    </li>
+    <li>Policies
+      <ul><li><a href="docs/policies/policy1.md">Policy 1</a></li></ul>
+    </li>
+    <li>Articles
+      <ul><li><a href="docs/articles/article1.md">Article 1</a></li></ul>
+    </li>
+  </ul>
 </nav>
-
-<div class="container">
-  <section id="home" class="active">
-    <h2>Home</h2>
-    <p>Welcome to ELC School where young minds explore, learn, and grow in a safe, fun environment guided by passionate educators.</p>
-  </section>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>ELC School nurtures children from early learning years through primary and secondary education. Our focus: creativity, critical thinking, physical development, and social skills.</p>
-  </section>
-  <section id="programs">
-    <h2>Programs</h2>
-    <div class="category-grid">
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png">
-        <h3>Academics</h3>
-        <p>Early numeracy, literacy, science fun activities.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png">
-        <h3>Sports & Play</h3>
-        <p>Outdoor games, yoga, structured play sessions.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png">
-        <h3>Arts & Crafts</h3>
-        <p>Painting, drawing, model making, creativity boost.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3658/3658896.png">
-        <h3>Music & Dance</h3>
-        <p>Music classes, rhythm sessions, free dance play.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4359/4359804.png">
-        <h3>Library Time</h3>
-        <p>Storytelling, picture books, child-friendly reading.</p>
-      </div>
-    </div>
-  </section>
-  <section id="curriculum">
-    <h2>Curriculum</h2>
-    <h3>EYLF (Early Years Learning Framework)</h3>
-    <ul>
-      <li>Belonging, Being & Becoming Principles</li>
-      <li>Communication & Language Development</li>
-      <li>Social & Emotional Well-being</li>
-      <li>Creative Arts, Physical Play</li>
-    </ul>
-    <h3>Montessori Subjects</h3>
-    <ul>
-      <li>Practical Life Skills (Pouring, Cleaning, Dressing)</li>
-      <li>Sensorial Activities (Sound, Color, Shape)</li>
-      <li>Mathematics (Counting Beads, Number Rods)</li>
-      <li>Language (Phonetics, Letter Tracing)</li>
-      <li>Cultural Subjects (Geography, Zoology)</li>
-    </ul>
-    <h3>Primary School Subjects</h3>
-    <ul>
-      <li>English</li>
-      <li>Mathematics</li>
-      <li>Science & Technology</li>
-      <li>History & Geography</li>
-      <li>Creative Arts</li>
-      <li>Physical Education</li>
-    </ul>
-    <h3>Secondary School Subjects</h3>
-    <ul>
-      <li>English Language & Literature</li>
-      <li>Advanced Mathematics</li>
-      <li>Sciences (Physics, Chemistry, Biology)</li>
-      <li>ICT / Computer Science</li>
-      <li>History, Geography, Social Studies</li>
-      <li>Art, Music, Drama</li>
-      <li>Physical & Health Education</li>
-    </ul>
-  </section>
-  <section id="admissions">
-    <h2>Admissions</h2>
-    <p>Enroll your child for a wonderful learning journey! Our admissions process includes:</p>
-    <ul>
-      <li>Online Application Form</li>
-      <li>Parent Interview</li>
-      <li>Child Observation Session</li>
-      <li>Final Confirmation & Admission Fee Payment</li>
-    </ul>
-    <p><strong>For admissions queries:</strong> admissions@elcschool.com</p>
-  </section>
-  <section id="feedback">
-    <h2>Parents Feedback</h2>
-    <p><em>"ELC has transformed our child's confidence and love for learning!"</em> – The Smith Family</p>
-    <p><em>"Teachers are warm, attentive, and very professional. Highly recommend!"</em> – Johnsons</p>
-    <p><em>"A great mix of play and structured learning. Our child loves school days now!"</em> – The Lees</p>
-  </section>
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> 123 Sunshine Avenue, Learning City</p>
-    <p><strong>Email:</strong> info@elcschool.com</p>
-    <p><strong>Phone:</strong> +123 456 7890</p>
-  </section>
+<div id="content">
+    <p>Select a document from the sidebar to view its content.</p>
 </div>
-
-<footer>
-  &copy; 2025 ELC School. All rights reserved.
-</footer>
-
-<script>
-  function showPage(pageId) {
-    document.querySelectorAll('section').forEach(function(section) {
-      section.classList.remove('active');
-    });
-    document.getElementById(pageId).classList.add('active');
-  }
-</script>
-
 </body>
 </html>
