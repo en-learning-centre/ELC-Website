@@ -1,0 +1,118 @@
+/* Layout for ELC website */
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1a73e8;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+aside#sidebar {
+  width: 260px;
+  margin-top: 60px;
+  padding: 20px;
+  background: #f5f5f5;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  position: fixed;
+}
+
+main#content {
+  margin-left: 280px;
+  padding: 80px 20px 20px 20px;
+  flex: 1;
+}
+
+/* Sidebar links */
+#sidebar a {
+  display: block;
+  padding: 4px 0;
+  color: #333;
+  text-decoration: none;
+}
+#sidebar a:hover {
+  color: #1a73e8;
+}
+#sidebar a.active {
+  font-weight: bold;
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* Markdown content */
+#content h1, #content h2, #content h3 {
+  margin-top: 1em;
+}
+#content p {
+  line-height: 1.6;
+}
+#content ul, #content ol {
+  margin-left: 20px;
+}
+#content code {
+  background: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Media containers */
+.document-container, .media-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+.media-container video, .media-container audio,
+.document-container iframe, .document-container img {
+  width: 100%;
+}
+
+/* Comments */
+#comments {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+.comment {
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+}
+
+/* Donation button */
+#donation {
+  margin-top: 20px;
+}
+button.donate {
+  background: #1a73e8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button.donate:hover {
+  background: #155ab6;
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
