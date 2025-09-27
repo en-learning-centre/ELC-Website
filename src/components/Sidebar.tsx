@@ -1,157 +1,174 @@
 import React from "react";
+import styles from "./Sidebar.module.css";
 
 const Sidebar: React.FC = () => {
   return (
-    <aside
-      id="sidebar"
-      className="w-72 min-h-screen bg-gradient-to-b from-blue-900 to-blue-700 text-white p-4 shadow-xl fixed overflow-y-auto"
-    >
-      <h2 className="text-xl font-bold mb-4 text-center">📚 ELC Documents</h2>
+    <>
+      <aside className={styles.sidebarContainer}>
+        <h2>ELC Documents</h2>
+        <input type="text" id="search" placeholder="Search documents..." className={styles.search} />
+        <nav>
+          <ul className={styles.docList}>
 
-      <input
-        type="text"
-        id="search"
-        placeholder="🔍 Search documents..."
-        className="w-full p-2 mb-4 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      />
-
-      <nav>
-        <ul id="doc-list" className="space-y-4 text-sm">
-
-          {/* Preschool */}
-          {["Preschool 1","Preschool 2","Preschool 3"].map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/literacy.md`} className="hover:text-yellow-200">Literacy</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/numeracy.md`} className="hover:text-yellow-200">Numeracy</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/arts.md`} className="hover:text-yellow-200">Arts</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/science.md`} className="hover:text-yellow-200">Science</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
+            {/* Preschool Levels */}
+            <li><strong>Preschool 1</strong>
+              <ul>
+                <li><a href="docs/CURRICULUM/preschool1/literacy.md">Literacy</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/numeracy.md">Numeracy</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/arts.md">Arts</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/science.md">Science</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/teachers-guide.md">Teachers Guide</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/questions.md">Questions</a></li>
+                <li><a href="docs/CURRICULUM/preschool1/answers.md">Answers</a></li>
               </ul>
             </li>
-          ))}
-
-          {/* Primary 1–6 */}
-          {Array.from({ length: 6 }, (_, i) => `Primary ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/english.md`} className="hover:text-yellow-200">English</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/mathematics.md`} className="hover:text-yellow-200">Mathematics</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/science.md`} className="hover:text-yellow-200">Science</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/social-studies.md`} className="hover:text-yellow-200">Social Studies</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/arts.md`} className="hover:text-yellow-200">Arts</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
+            <li><strong>Preschool 2</strong>
+              <ul>
+                <li><a href="docs/CURRICULUM/preschool2/literacy.md">Literacy</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/numeracy.md">Numeracy</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/arts.md">Arts</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/science.md">Science</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/teachers-guide.md">Teachers Guide</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/questions.md">Questions</a></li>
+                <li><a href="docs/CURRICULUM/preschool2/answers.md">Answers</a></li>
               </ul>
             </li>
-          ))}
-
-          {/* Junior Secondary 1–3 */}
-          {Array.from({ length: 3 }, (_, i) => `JSS ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/english.md`} className="hover:text-yellow-200">English</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/mathematics.md`} className="hover:text-yellow-200">Mathematics</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/science.md`} className="hover:text-yellow-200">Science</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/social-studies.md`} className="hover:text-yellow-200">Social Studies</a></li>
+            <li><strong>Preschool 3</strong>
+              <ul>
+                <li><a href="docs/CURRICULUM/preschool3/literacy.md">Literacy</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/numeracy.md">Numeracy</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/arts.md">Arts</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/science.md">Science</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/teachers-guide.md">Teachers Guide</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/questions.md">Questions</a></li>
+                <li><a href="docs/CURRICULUM/preschool3/answers.md">Answers</a></li>
               </ul>
             </li>
-          ))}
 
-          {/* Senior Secondary 1–3 */}
-          {Array.from({ length: 3 }, (_, i) => `SSS ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/english.md`} className="hover:text-yellow-200">English</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/mathematics.md`} className="hover:text-yellow-200">Mathematics</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/biology.md`} className="hover:text-yellow-200">Biology</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/chemistry.md`} className="hover:text-yellow-200">Chemistry</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/physics.md`} className="hover:text-yellow-200">Physics</a></li>
-              </ul>
-            </li>
-          ))}
+            {/* Primary Levels */}
+            {["primary1","primary2","primary3","primary4","primary5","primary6"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/english.md`}>English</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/mathematics.md`}>Mathematics</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/science.md`}>Science</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/social-studies.md`}>Social Studies</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/arts.md`}>Arts</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
 
-          {/* Youth Education 1–3 */}
-          {Array.from({ length: 3 }, (_, i) => `Youth Education ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/subjects.md`} className="hover:text-yellow-200">Subjects</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
-              </ul>
-            </li>
-          ))}
+            {/* Junior Secondary Levels */}
+            {["jss1","jss2","jss3"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/subjects.md`}>Subjects</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
 
-          {/* Parenting 1–3 */}
-          {Array.from({ length: 3 }, (_, i) => `Parenting ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/guides.md`} className="hover:text-yellow-200">Guides</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
-              </ul>
-            </li>
-          ))}
+            {/* Senior Secondary Levels */}
+            {["sss1","sss2","sss3"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/subjects.md`}>Subjects</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
 
-          {/* Professional 1–2 */}
-          {Array.from({ length: 2 }, (_, i) => `Professional ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/skills.md`} className="hover:text-yellow-200">Skills</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
-              </ul>
-            </li>
-          ))}
+            {/* Youth Education Levels */}
+            {["youth-education1","youth-education2","youth-education3"].map(level => (
+              <li key={level}><strong>{level.replace("-", " ").toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/subjects.md`}>Subjects</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
 
-          {/* Extracurricular 1–6 */}
-          {Array.from({ length: 6 }, (_, i) => `Extracurricular ${i + 1}`).map((level) => (
-            <li key={level}>
-              <strong className="block text-yellow-300">{level}</strong>
-              <ul className="ml-3 space-y-1">
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/activities.md`} className="hover:text-yellow-200">Activities</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/teachers-guide.md`} className="hover:text-yellow-200">Teachers Guide</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/questions.md`} className="hover:text-yellow-200">Questions</a></li>
-                <li><a href={`docs/CURRICULUM/${level.toLowerCase().replace(" ","")}/answers.md`} className="hover:text-yellow-200">Answers</a></li>
-              </ul>
-            </li>
-          ))}
+            {/* Parenting Levels */}
+            {["parenting1","parenting2","parenting3"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/guides.md`}>Guides</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
 
-          {/* Other Sections */}
-          <li className="pt-4 border-t border-blue-500">
-            <a href="#video1" className="hover:text-yellow-200">🎥 Intro Video</a>
-          </li>
-          <li>
-            <a href="#donation" className="hover:text-yellow-200">💖 Donate</a>
-          </li>
-          <li>
-            <a href="#faq" className="hover:text-yellow-200">❓ FAQ</a>
-          </li>
-          <li>
-            <a href="#signup" className="hover:text-yellow-200">✍️ Sign Up</a>
-          </li>
-          <li>
-            <a href="#login" className="hover:text-yellow-200">🔑 Login</a>
-          </li>
-          <li>
-            <a href="#impressum" className="hover:text-yellow-200">ℹ️ Impressum</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+            {/* Professional Levels */}
+            {["professional1","professional2"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/skills.md`}>Skills</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
+
+            {/* Extracurricular Levels */}
+            {["extracurricular1","extracurricular2","extracurricular3","extracurricular4","extracurricular5","extracurricular6"].map(level => (
+              <li key={level}><strong>{level.toUpperCase()}</strong>
+                <ul>
+                  <li><a href={`docs/CURRICULUM/${level}/activities.md`}>Activities</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/teachers-guide.md`}>Teachers Guide</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/questions.md`}>Questions</a></li>
+                  <li><a href={`docs/CURRICULUM/${level}/answers.md`}>Answers</a></li>
+                </ul>
+              </li>
+            ))}
+
+            {/* Media & Other Sections */}
+            <li><a href="#video1">Intro Video</a></li>
+            <li><a href="#audio1">Sample Audio</a></li>
+            <li><a href="#image1">Gallery Image</a></li>
+            <li><a href="#donation">Donate</a></li>
+            <li><a href="#faq">Q&A / FAQ</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+
+          </ul>
+        </nav>
+      </aside>
+
+      <main className={styles.content}>
+        <h1>Welcome to EducateMeSL</h1>
+        <p>This is your central hub for accessing all curriculum, lesson plans, and resources.</p>
+        <section id="video1">
+          <h2>Intro Video</h2>
+          <video controls>
+            <source src="media/sample-video.mp4" type="video/mp4" />
+          </video>
+        </section>
+        <section id="audio1">
+          <h2>Sample Audio</h2>
+          <audio controls>
+            <source src="media/sample-audio.mp3" type="audio/mp3" />
+          </audio>
+        </section>
+        <section id="image1">
+          <h2>Gallery Image</h2>
+          <img src="media/sample-image.jpg" alt="Gallery" />
+        </section>
+      </main>
+    </>
   );
 };
 
