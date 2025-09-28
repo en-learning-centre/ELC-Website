@@ -4,6 +4,3 @@
   "forwardPorts": [5173],
   "postStartCommand": "npm run dev"
 }
-git add .devcontainer/devcontainer.json
-git commit -m "Add Codespaces auto setup for EducateMeSL"
-git push
