@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - EducateMeSL</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">EducateMeSL</div>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Content -->
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Reach out with questions, feedback, or partnership opportunities.</p>
+      
+      <h2>Email</h2>
+      <p>info@educatemesl.org</p>
+      
+      <h2>Community Office</h2>
+      <p>Freetown, Sierra Leone</p>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 EducateMeSL. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Script for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
