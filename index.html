@@ -6,6 +6,31 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">EducateMeSL</a>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="preschool.html">Preschool</a></li>
+      <li><a href="primary.html">Primary</a></li>
+      <li><a href="junior-secondary.html">Junior Secondary</a></li>
+      <li><a href="senior-secondary.html">Senior Secondary</a></li>
+      <li><a href="youth.html">Special Youth Programs</a></li>
+      <li><a href="parenting.html">Parenting</a></li>
+      <li><a href="professional.html">Professional Review</a></li>
+      <li><a href="community.html">Community & Events</a></li>
+    </ul>
+  </nav>
+</header>
+  
   <header><h1>En-Learning Centre (ELC)</h1></header>
 
   <nav>
@@ -60,5 +85,14 @@
   </p>
   <p>&copy; 2025 EducateMeSL. All rights reserved.</p>
 </footer>
+  <script>
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
