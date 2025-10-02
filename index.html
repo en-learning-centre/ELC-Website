@@ -2,97 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to ELC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EducateMeSL - Home</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+
+  <!-- ✅ Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">EducateMeSL</a>
-    </div>
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+    <div class="logo">EducateMeSL</div>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="preschool.html">Preschool</a></li>
-      <li><a href="primary.html">Primary</a></li>
-      <li><a href="junior-secondary.html">Junior Secondary</a></li>
-      <li><a href="senior-secondary.html">Senior Secondary</a></li>
-      <li><a href="youth.html">Special Youth Programs</a></li>
-      <li><a href="parenting.html">Parenting</a></li>
-      <li><a href="professional.html">Professional Review</a></li>
-      <li><a href="community.html">Community & Events</a></li>
-    </ul>
-  </nav>
-</header>
-  
-  <header><h1>En-Learning Centre (ELC)</h1></header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#curriculum">Curriculum</a></li>
-      <li><a href="#lesson">Lesson Plans</a></li>
-      <li><a href="#policy">Policies</a></li>
-      <li><a href="#articles">Articles</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- ✅ Main Content -->
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <ul><li><a href="docs/about/about.pdf" target="_blank">About ELC (PDF)</a></li></ul>
+    <section class="hero">
+      <h1>Welcome to EducateMeSL</h1>
+      <p>Your learning partner for every stage of education in Sierra Leone and beyond.</p>
     </section>
-    <section id="vision">
-      <h2>Vision</h2>
-      <ul><li><a href="docs/vision/vision.docx" target="_blank">Vision Document (Word)</a></li></ul>
-    </section>
-    <section id="mission">
-      <h2>Mission</h2>
-      <ul><li><a href="docs/mission/mission.txt" target="_blank">Mission (Text)</a></li></ul>
-    </section>
-    <section id="curriculum">
-      <h2>Curriculum</h2>
-      <ul>
-        <li><a href="docs/curriculum/eylf.pdf" target="_blank">EYLF Curriculum (PDF)</a></li>
-        <li><a href="docs/curriculum/montessori.docx" target="_blank">Montessori Curriculum (Word)</a></li>
-      </ul>
-    </section>
-    <section id="lesson">
-      <h2>Lesson Plans</h2>
-      <ul><li><a href="docs/lesson-plans/rainy-day-activity.pdf" target="_blank">Rainy Day Activity (PDF)</a></li></ul>
-    </section>
-    <section id="policy">
-      <h2>Policies</h2>
-      <ul><li><a href="docs/policies/health-safety-policy.pdf" target="_blank">Health & Safety Policy (PDF)</a></li></ul>
-    </section>
-    <section id="articles">
-      <h2>Articles</h2>
-      <ul><li><a href="docs/articles/power-of-play.docx" target="_blank">The Power of Play (Word)</a></li></ul>
+
+    <section class="intro">
+      <h2>Explore Our Programs</h2>
+      <p>From Preschool to Professional Review, we provide tailored learning experiences for every age group and community member.</p>
     </section>
   </main>
-  <footer>
-  <p>
-    <a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
-    <a href="terms-of-service.html" target="_blank">Terms of Service</a>
-  </p>
-  <p>&copy; 2025 EducateMeSL. All rights reserved.</p>
-</footer>
-  <script>
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-</script>
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 EducateMeSL. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Script for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
