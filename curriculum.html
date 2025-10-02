@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum - EducateMeSL</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">EducateMeSL</div>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="curriculum.html" class="active">Curriculum</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Content -->
+  <main>
+    <section class="curriculum">
+      <h1>Our Curriculum</h1>
+      <p>Explore lesson plans, assessments, and structured curricula for every level of education:</p>
+      <ul>
+        <li>Preschool: Early Childhood Foundations</li>
+        <li>Primary: Core Subjects & Creative Learning</li>
+        <li>Junior Secondary: Intermediate Education</li>
+        <li>Senior Secondary: Advanced Studies & Exam Prep</li>
+        <li>Special Programs: Skills for Youth</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 EducateMeSL. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Script for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
